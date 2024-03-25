@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 16px 0 0;
+    border-bottom: 1px solid #ccc;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#botaoMenu {
+    display: none;
+}
+
+header form button,
+header form input {
+    padding: 8px;
+}
+
+header form input {
+    border-color: #0ddbdb;
+}
+
+header form button {
+    border: none;
+    border-radius: 6px;
+    background-color: #0ddbdb;
+    width: 90px;
+}
+
+nav .menu {
+    display: flex;
+}
+
+nav .menu > li {
+    list-style: none;
+    padding: 16px 16px 0px 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+nav .menu > li:hover {
+    border-color: #0ddbdb;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+nav .submenu {
+    display: none;
+    position: absolute;
+    width: 150px;
+    top: 100%;
+    left: 0;
+}
+
+nav .submenu li {
+    padding: 8px;
+    list-style: none;
+}
+
+main .sobre {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+}
+
+main .sobre img {
+    margin-right: 30px;
+}
+
+main .sobre .informacao h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0ddbdb;
+    margin-bottom: 20px;
+}
+
+main .produtosRoupas {
+    margin-top: 50px;
+}
+
+main .produtosRoupas h2,
+main .produtosSapatos h2  {
+    border-bottom: 2px solid #0ddbdb;
+    padding: 15px 0;
+}
+
+main .produtosSapatos {
+    margin-top: 200px;
+}
+
+main .produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 23.5%);
+    column-gap: 2%;
+    row-gap: 5%;
+    margin: 20px 0;
+}
+
+main .produtos .produto img {
+    width: 100%;
+}
+
+main .produtos .produto h3{
+    margin: 10px 0;
+}
+
+main .produtos .produto p{
+    margin-bottom: 10px;
+}
+
+main .produtos .produto button{
+    width: 100%;
+    padding: 6px;
+    border: none;
+    background-color: #0ddbdb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 90%;
+    }
+
+    #botaoMenu {
+        display: block;
+        border: none;
+        padding: 10px;
+        background-color: #0ddbdb;
+        cursor: pointer;
+    }
+
+    nav .menu {
+        display: none;
+    }
+    
+    nav .menu > li {
+        list-style: none;
+        padding: 16px 16px 0px 16px;
+        border-top: 4px solid transparent;
+    }
+    
+    nav .submenu {
+        display: flex;
+        position: relative;
+    }
+
+    main .sobre {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .sobre img {
+        justify-self: center;
+        margin: 0;
+    }
+
+    main .sobre .informacao {
+        margin-top: 20px;
+    }
+
+    main .produtosSapatos {
+        margin-top: 20px;
+    }
+
+    main .produtos {
+        display: block;
+    }
+
+    main .produtos .produto{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    #botaoMenu {
+        display: none;
+    }
+
+    main .sobre {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .sobre img {
+        justify-self: center;
+        margin: 0;
+    }
+
+    main .sobre .informacao {
+        margin-top: 20px;
+    }
+
+    main .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 2%;
+        row-gap: 5%;
+        margin: 20px 0;
+    }
+
+    main .produtos .produto {
+        display: grid;
+    }
+
+    main .produtos .produto img {
+        justify-self: center;
+    }
+}
+
